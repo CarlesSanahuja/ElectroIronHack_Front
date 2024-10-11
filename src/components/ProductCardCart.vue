@@ -21,7 +21,7 @@ const product = ref(props.product)
             <div class="product-details">
                 <h2 class="product-name">{{ product.name }}</h2>
                 <p class="product-description">{{ product.description }}</p>
-                <p class="product-quantity">Cantidad: {{ product.quantity }}</p>
+                <p class="product-quantity">Quantity: {{ product.quantity }}</p>
                 <p class="product-price">{{ product.price }}€</p>
                 <article>
                     <button @click="product.quantity++">+</button>
@@ -36,116 +36,105 @@ const product = ref(props.product)
 </template>
 
 <style scoped>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.shopping-cart {
-    width: 80%;
-    max-width: 900px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .cart-item {
-    display: flex;
-    border-bottom: 1px solid #ddd;
-    padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f4f8;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
 }
 
-.product-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
+.cart-item img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .product-details {
-    margin-left: 20px;
-    flex: 1;
+  flex-grow: 1;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-name {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 .product-description {
-    margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
 }
 
-.product-quantity {
-    margin-bottom: 10px;
-}
-
-.product-quantity input {
-    width: 50px;
-    padding: 5px;
-    font-size: 1em;
-}
-
+.product-quantity,
 .product-price {
-    font-weight: bold;
+  font-size: 16px;
+  color: #00416a;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.cart-total {
-    text-align: right;
-    margin-top: 20px;
+article {
+  display: flex;
+  gap: 10px;
 }
 
-.cart-total h2 {
-    font-size: 1.5em;
+article button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-.cart-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+article button:hover {
+  background-color: #005f8c;
 }
 
-.cart-actions button {
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+article button:active {
+  transform: scale(0.95);
 }
 
-.btn-clear {
-    background-color: #f44336;
-    color: white;
+article button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
-.btn-checkout {
-    background-color: #4CAF50;
-    color: white;
-}
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+  }
 
-.btn-clear:hover {
-    background-color: #d32f2f;
-}
+  .cart-item img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 
-.btn-checkout:hover {
-    background-color: #388E3C;
+  .product-details {
+    margin-left: 0;
+  }
+
+  article {
+    justify-content: flex-start;
+    width: 100%;
+  }
 }
 
 </style>

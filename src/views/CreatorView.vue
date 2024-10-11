@@ -82,35 +82,106 @@ const handleSubmit = (e) => {
 </template>
 
 <style scoped>
+section {
+  background-color: #f7f9fc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: 'Arial', sans-serif;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  width: 300px;
-  margin: 0 auto;
+  gap: 15px;
 }
 
 label {
+  font-size: 16px;
+  color: #00416a;
+  margin-bottom: 5px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
-input,
+input[type="text"],
+input[type="number"],
 textarea {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #00416a;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease;
+  background-color: #ffffff;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #0077b6;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 button {
-  padding: 0.75rem;
-  background-color: #007bff;
-  color: white;
+  background-color: #00416a;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 18px;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0077b6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+button:active {
+  background-color: #003f5c;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}
+
 </style>

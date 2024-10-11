@@ -35,7 +35,7 @@ const clearCart = () => {
 <template>
   <section>
     <article>
-      <h2>PRODUCTOS COMPRADOS</h2>
+      <h2>Products in the cart</h2>
       <!-- Renderizado de cada producto -->
       <ProductCardCart
         v-for="product in productsInChart"
@@ -43,24 +43,24 @@ const clearCart = () => {
         :product="product"
       >
         <!-- Botón para eliminar producto -->
-        <button @click="removeProduct(product.id)" class="btn-remove">Eliminar</button>
+        <button @click="removeProduct(product.id)" class="btn-remove">Delete</button>
       </ProductCardCart>
     </article>
     
   </section>
   <div class="shopping-cart">
-        <h1>Carrito de la Compra</h1>
+        <h1><img src="../assets/cart2.png" alt="Logo de la tienda" /></h1>
         
 
         <!-- Total -->
         <div class="cart-total">
-            <h2>Total de la compra: {{ finalPrice }}</h2>
+            <h2>Total amount: {{ finalPrice }}</h2>
         </div>
 
         <!-- Botones de acción -->
         <div class="cart-actions">
-          <button @click="clearCart" class="btn-clear">Vaciar Carrito</button>
-            <button class="btn-checkout">Proceder al Pago</button>
+          <button @click="clearCart" class="btn-clear">Clear Cart</button>
+            <button class="btn-checkout">Pay</button>
         </div>
     </div>
 </template>
@@ -177,5 +177,26 @@ h1 {
 .btn-checkout:hover {
     background-color: #388E3C;
 }
-
+.btn-remove{
+  background-color: #f44336;
+  color: white;
+ border-radius: 5px;
+  margin-top: 5px;
+  margin-right: 10px;
+  height: 30px;
+}
+article h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00416a; /* Color del título */
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #0077b6; /* Subrayado decorativo */
+  padding-bottom: 10px;
+}
+img{
+  max-height: 60px;
+}
 </style>

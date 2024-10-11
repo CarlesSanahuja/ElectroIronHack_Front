@@ -21,16 +21,14 @@ const product = ref(props.product)
     <img :src="product.image" alt="" />
     <p class="price">Precio: {{ product.price }}€</p>
     <div class="cart_buttons">
-      <button @click="product.quantity++">+</button>
-      <button @click="product.quantity--">-</button>
       <button class="add-chart" @click="productStore.addToChart(product)">
-        Añadir {{ product.quantity }} al carro
+        Add to Card
       </button>  
     </div>
       
       <!-- Botón para ver la ficha del artículo -->
       <router-link :to="'/product/' + product.id">
-        <button class="file">Ver Ficha del Artículo</button>
+        <button class="file">Product sheet</button>
       </router-link>
     
   </div>
@@ -39,61 +37,106 @@ const product = ref(props.product)
 
 <style scoped>
 .card {
-  background-color: #85d0ff;
+  background-color: #e0f7ff;
   width: 250px;
-  height: 365px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid #00416a;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  padding: 15px;
+  text-align: center;
+  overflow: hidden;
 }
 
 .card:hover {
   transform: scale(1.05); /* Aumenta el tamaño ligeramente */
-  background-color: #6fb9e6; /* Cambia el color de fondo ligeramente más oscuro */
-  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+  background-color: #d0efff; /* Cambia el color de fondo */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.1); /* La imagen aumenta ligeramente */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00416a;
+  margin-bottom: 8px;
 }
 
 .description {
-  width: 80%;
+  width: 90%;
   text-align: center;
-  margin: 7px 0;
-  max-height: 10%;
-  min-height: 10%;
+  font-size: 14px;
+  color: #333;
+  margin: 10px 0;
+  line-height: 1.4;
+  max-height: 45px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-img {
-  max-width: 100%;
-  max-height: 45%;
-}
-
-button {
-  width: 30px;
-  border-radius: 5px;
-}
-
-.add-chart {
-  width: 120px;
-  margin: 0 5px;
-}
-.name{
-  font-size: 18px;
+.price {
+  font-size: 16px;
+  color: #0077b6;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.file{
-  width: 100px;
+
+.cart_buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
-.price{
-  margin-bottom: 10px;
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0077b6;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.cart_buttons{
-  margin-bottom: 10px;
+
+button:hover {
+  background-color: #005f99;
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
 }
-.name{
-  margin-top: 5px;
+
+.file {
+  background-color: #071e51;
+  margin-top: 10px;
 }
+
+.file:hover {
+  background-color: #090404;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+
 </style>

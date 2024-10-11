@@ -6,12 +6,12 @@
     
     <div class="footer-section">
       <h2>About Us</h2>
-      <p>ElectroShop is your trusted store for high-quality electronics and home appliances. We provide top-notch products with excellent customer service.</p>
+      <p>ElectroIronHack is your trusted store for high-quality electronics and home appliances. We provide top-notch products with excellent customer service.</p>
     </div>
 
     <div class="footer-section">
       <h2>Contact Us</h2>
-      <p>Email: support@electroshop.com</p>
+      <p>Email: electroIronHack.com</p>
       <p>Phone: +1 234 567 890</p>
       <p>Address: 123 Electro St., Tech City</p>
     </div>

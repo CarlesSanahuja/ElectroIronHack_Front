@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import ProductView from '../views/ProductView.vue'
 import CreatorView from '@/views/CreatorView.vue'
 import ChartView from '@/views/ChartView.vue'
 import ProductDetailView from '@/views/ProductDetailView.vue'
+import HomeView from '@/views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
       name: 'productDetail',
       component: ProductDetailView,
       props: true // Permite pasar el parámetro 'id' como prop a la vista
+    },
+    {
+      path: '/products',
+      name: 'products',
+      component: ProductView
     }
   ]
 })
