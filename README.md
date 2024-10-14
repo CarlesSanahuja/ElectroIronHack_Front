@@ -145,25 +145,25 @@ git clone <url-del-repositorio>
 cd <directorio-del-proyecto>
 ```
 
-2. **Instala las dependencias:
+2. **Instala las dependencias**:
 
 ```bash
 npm install
 ```
 
-3. **Ejecuta el servidor de desarrollo:
+3. **Ejecuta el servidor de desarrollo**:
 
 '''bash
 npm run dev
 ```
 
-4.  **Compila para producción:
+4.  **Compila para producción**:
 
 '''bash
 npm run build
 ```
 
-5. **Ejecuta el servidor en producción:
+5. **Ejecuta el servidor en producción**:
 
 ```bash
 npm run serve
