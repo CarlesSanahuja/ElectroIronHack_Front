@@ -6,6 +6,8 @@ const productStore = useProductStore()
 
 const name = ref('')
 const description = ref('')
+const longDescription = ref('')
+const ean = ref('')
 const image = ref('')
 const stock = ref(0)
 const price = ref(0)
@@ -30,20 +32,31 @@ const handleSubmit = (e) => {
     <h2>Product Creator</h2>
     <form @submit="handleSubmit">
       <div>
-        <label for="name">Name:</label>
-        <input v-model="name" type="text" id="name" placeholder="Enter product name" required />
+        <label for="name">Nombre:</label>
+        <input v-model="name" type="text" id="name" placeholder="Introduce el nombre" required />
       </div>
-
       <div>
-        <label for="description">Description:</label>
+        <label for="ean">EAN:</label>
+        <input v-model="ean" type="text" id="name" placeholder="Introduce el EAN" required />
+      </div>
+      <div>
+        <label for="description">Descripción:</label>
         <textarea
           v-model="description"
           id="description"
-          placeholder="Enter product description"
+          placeholder="Entra la descripción"
           required
         ></textarea>
       </div>
-
+      <div>
+        <label for="longDescription">Descripción Larga</label>
+        <textarea
+          v-model="longDescription"
+          id="longDescription"
+          placeholder="Entra la descripción larga"
+          required
+        ></textarea>
+      </div>
       <div>
         <label for="image">Image URL:</label>
         <input v-model="image" type="text" id="image" placeholder="Enter image URL" required />

@@ -31,9 +31,9 @@ const isProductView = computed(() => route.path === '/products')
 
     <nav class="main-nav">
       <ul>
-        <li><router-link to="/" class="home">Go to HOME</router-link></li>
-        <li><router-link to="/products" class="home">Products</router-link></li>
-        <li><router-link to="/chart">Chart</router-link></li>
+        <li><router-link to="/" class="home">HOME</router-link></li>
+        <li><router-link to="/products" class="home">Productos</router-link></li>
+        <li><router-link to="/chart">Carrito</router-link></li>
       </ul>
     </nav>
   </header>

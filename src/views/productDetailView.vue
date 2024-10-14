@@ -2,6 +2,7 @@
   <div v-if="product">
     <h1>{{ product.name }}</h1>
     <img :src="product.image" alt="" />
+    <p>EAN:{{ product.ean }}</p>
     <p>{{ product.description }}</p>
     <p>Precio: {{ product.price }} €</p>
     <p>Descripción detallada:{{ product.longDescription }}</p>
@@ -130,7 +131,7 @@ p:nth-child(5) {
 div p {
   font-size: 1.2em;
   text-align: center;
-  color: #e74c3c;
+  color: #0e0788;
   font-weight: bold;
 }
 

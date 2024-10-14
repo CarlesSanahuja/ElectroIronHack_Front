@@ -22,13 +22,13 @@ const product = ref(props.product)
     <p class="price">Precio: {{ product.price }}€</p>
     <div class="cart_buttons">
       <button class="add-chart" @click="productStore.addToChart(product)">
-        Add to Card
+        Añadir al carrito
       </button>  
     </div>
       
       <!-- Botón para ver la ficha del artículo -->
       <router-link :to="'/product/' + product.id">
-        <button class="file">Product sheet</button>
+        <button class="file">Detalles del producto</button>
       </router-link>
     
   </div>

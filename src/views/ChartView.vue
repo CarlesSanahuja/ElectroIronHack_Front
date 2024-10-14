@@ -35,7 +35,7 @@ const clearCart = () => {
 <template>
   <section>
     <article>
-      <h2>Products in the cart</h2>
+      <h2>Productos del Carrito</h2>
       <!-- Renderizado de cada producto -->
       <ProductCardCart
         v-for="product in productsInChart"
@@ -43,7 +43,7 @@ const clearCart = () => {
         :product="product"
       >
         <!-- Botón para eliminar producto -->
-        <button @click="removeProduct(product.id)" class="btn-remove">Delete</button>
+        <button @click="removeProduct(product.id)" class="btn-remove">Eliminar</button>
       </ProductCardCart>
     </article>
     
@@ -54,13 +54,13 @@ const clearCart = () => {
 
         <!-- Total -->
         <div class="cart-total">
-            <h2>Total amount: {{ finalPrice }}</h2>
+            <h2>Precio total: {{ finalPrice }}</h2>
         </div>
 
         <!-- Botones de acción -->
         <div class="cart-actions">
-          <button @click="clearCart" class="btn-clear">Clear Cart</button>
-            <button class="btn-checkout">Pay</button>
+          <button @click="clearCart" class="btn-clear">Borrar Carrito</button>
+            <button class="btn-checkout">Pagar</button>
         </div>
     </div>
 </template>

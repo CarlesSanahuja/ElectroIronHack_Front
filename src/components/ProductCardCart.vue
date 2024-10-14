@@ -21,7 +21,7 @@ const product = ref(props.product)
             <div class="product-details">
                 <h2 class="product-name">{{ product.name }}</h2>
                 <p class="product-description">{{ product.description }}</p>
-                <p class="product-quantity">Quantity: {{ product.quantity }}</p>
+                <p class="product-quantity">Cantidad: {{ product.quantity }}</p>
                 <p class="product-price">{{ product.price }}€</p>
                 <article>
                     <button @click="product.quantity++">+</button>
