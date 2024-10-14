@@ -165,7 +165,7 @@ npm run build
 
 5. **Ejecuta el servidor en producción:
 
-'''bash
+```bash
 npm run serve
 ```
 
