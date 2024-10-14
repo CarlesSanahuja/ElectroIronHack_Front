@@ -1,19 +1,19 @@
 <template>
     <section class="delete-product">
-      <h2>Delete Product</h2>
+      <h2>Eliminar Producto</h2>
       <form @submit.prevent="handleDelete">
         <div class="input-group">
-          <label for="productId">Product ID:</label>
+          <label for="productId">ID del producto:</label>
           <input
             v-model="productId"
             type="number"
             id="productId"
-            placeholder="Enter product ID"
+            placeholder="introduce el id del producto"
             required
           />
         </div>
   
-        <button type="submit" class="btn-delete">Delete Product</button>
+        <button type="submit" class="btn-delete">Eliminar Producto</button>
       </form>
   
       <p v-if="message" class="message">{{ message }}</p>
