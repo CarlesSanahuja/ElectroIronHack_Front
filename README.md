@@ -1,6 +1,6 @@
 # Tienda Online de Electrodomésticos (Proyecto Vue.js)
 
-Este proyecto es una tienda online de electrodomésticos desarrollada con **Vue.js**. La aplicación permite a los usuarios ver productos, agregarlos a un carrito de compras, crear nuevos productos (para administradores), buscar productos por nombre y eliminar productos por su ID. También se incluye una vista para ver los detalles completos de cada producto.
+Este proyecto es una tienda online de electrodomésticos desarrollada con **Vue.js**. La aplicación permite a los usuarios ver productos, agregarlos a un carrito de compras y ver la ficha del producto con todos los detalles del mismo. Para administradors permite crear nuevos productos y buscar por su ID para su eliminación.
 
 ## Estructura del Proyecto
 
@@ -20,12 +20,12 @@ Este proyecto es una tienda online de electrodomésticos desarrollada con **Vue.
 
 ### Store (`stores/product.js`)
 
-El store gestiona el estado de los productos, proporcionando funciones como agregar productos al carrito, eliminar productos y buscar productos. Este store está implementado utilizando **Pinia**.
+El store gestiona el estado de los productos, proporcionando funciones como agregar productos al carrito y buscar productos. Este store está implementado utilizando **Pinia**.
 
 - **addToChart(product)**: Agrega un producto al carrito.
-- **removeProduct(id)**: Elimina un producto por su ID.
-- **getAllProducts()**: Recupera todos los productos desde la API.
-- **searchProduct(query)**: Busca productos por nombre.
+- **fetchProduct())**: Obtiene todos los productos del backend y los almacena en el estado global.
+- **addToChart(product)**: Agrega un producto al carrito o incrementa la cantidad si ya existe.
+- **filteredProducts()**:Computa los productos que coinciden con el término de búsqueda ingresado.
 
 ### Rutas (`router/index.js`)
 
@@ -178,9 +178,9 @@ npm run serve
 - `/chart`: Carrito de compras (**CartView**)
 - `/delete-product`: Eliminar producto por ID (**DeleteProductView**)
 
-# Integración con la API
+# Integración con el Back
 
-Este proyecto se conecta a una API para la gestión de productos. Las principales rutas de la API son:
+Este proyecto se conecta a un Back en Spring Boot que proporciona una API REST simple para la gestión de productos
 
 - **GET** `/api/products`: Obtiene todos los productos.
 - **POST** `/api/products`: Crea un nuevo producto.
