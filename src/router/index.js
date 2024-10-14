@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import ProductView from '../views/ProductView.vue'
 import CreatorView from '@/views/CreatorView.vue'
 import ChartView from '@/views/ChartView.vue'
-import ProductDetailView from '@/views/ProductDetailView.vue'
+import ProductDetailView from '@/views/productDetailView.vue'
 import HomeView from '@/views/HomeView.vue'
 import DeleteProductView from '@/views/DeleteProductView.vue'
 const router = createRouter({
