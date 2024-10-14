@@ -153,13 +153,13 @@ npm install
 
 3. **Ejecuta el servidor de desarrollo**:
 
-'''bash
+```bash
 npm run dev
 ```
 
 4.  **Compila para producción**:
 
-'''bash
+```bash
 npm run build
 ```
 
