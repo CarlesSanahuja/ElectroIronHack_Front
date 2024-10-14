@@ -23,7 +23,7 @@ Este proyecto es una tienda online de electrodomésticos desarrollada con **Vue.
 El store gestiona el estado de los productos, proporcionando funciones como agregar productos al carrito y buscar productos. Este store está implementado utilizando **Pinia**.
 
 - **addToChart(product)**: Agrega un producto al carrito.
-- **fetchProduct())**: Obtiene todos los productos del backend y los almacena en el estado global.
+- **fetchProduct()**: Obtiene todos los productos del backend y los almacena en el estado global.
 - **addToChart(product)**: Agrega un producto al carrito o incrementa la cantidad si ya existe.
 - **filteredProducts()**:Computa los productos que coinciden con el término de búsqueda ingresado.
 
