@@ -78,30 +78,30 @@ const router = createRouter({
 });
 
 export default router;
-Vistas
-HomeView
+# Vistas
+
+## HomeView
 Página principal de la aplicación, que puede mostrar productos destacados o información relevante de la tienda.
 
-ProductView
+## ProductView
 Vista que muestra una lista de todos los productos disponibles en la tienda, con una barra de búsqueda para filtrar productos por nombre.
 
-ProductDetailView
+## ProductDetailView
 Muestra detalles completos de un producto específico, incluyendo imagen, descripción, precio, cantidad en stock y más.
 
-CartView
+## CartView
 Vista del carrito de compras. Los usuarios pueden ver todos los productos agregados, ajustar cantidades y eliminar productos del carrito.
 
-CreatorView
+## CreatorView
 Formulario para agregar nuevos productos. Está destinado a administradores o usuarios con permisos especiales para la gestión de inventario.
 
-DeleteProductView
+## DeleteProductView
 Vista que permite eliminar un producto ingresando su ID.
 
-App.vue
-El archivo principal de la aplicación Vue organiza los componentes globales y gestiona el enrutamiento con el <router-view>. Este archivo integra el encabezado, pie de página y el contenido principal.
+## App.vue
+El archivo principal de la aplicación Vue organiza los componentes globales y gestiona el enrutamiento con el `<router-view>`. Este archivo integra el encabezado, pie de página y el contenido principal.
 
-html
-Copiar código
+```html
 <script setup>
 import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
@@ -116,65 +116,77 @@ import HeaderComponent from './components/HeaderComponent.vue';
     <FooterComponent />
   </section>
 </template>
-Funcionalidades Clave
-Barra de búsqueda
-En la vista ProductView, los usuarios pueden buscar productos por nombre utilizando un campo de entrada. La búsqueda se actualiza en tiempo real, mostrando productos que coincidan con el criterio de búsqueda.
 
-Carrito de compras
+# Funcionalidades Clave
+
+### Barra de búsqueda
+En la vista `ProductView`, los usuarios pueden buscar productos por nombre utilizando un campo de entrada. La búsqueda se actualiza en tiempo real, mostrando productos que coincidan con el criterio de búsqueda.
+
+### Carrito de compras
 Los productos pueden ser agregados al carrito desde la lista de productos o desde la página de detalles del producto. En la vista del carrito, los usuarios pueden ver los productos agregados, ajustar cantidades y eliminar productos del carrito.
 
-Gestión de productos
-Los administradores pueden agregar nuevos productos mediante la vista de creación (CreatorView) o eliminarlos ingresando el ID en la vista de eliminación (DeleteProductView).
+### Gestión de productos
+Los administradores pueden agregar nuevos productos mediante la vista de creación (`CreatorView`) o eliminarlos ingresando el ID en la vista de eliminación (`DeleteProductView`).
 
-Vista de detalles del producto
+### Vista de detalles del producto
 Los usuarios pueden ver detalles específicos de un producto, como la descripción, precio y stock disponible, navegando a la página de detalles desde el listado de productos.
 
-Instalación y Configuración
+# Instalación y Configuración
+
 Sigue los siguientes pasos para instalar y configurar el proyecto en tu entorno local:
 
-Clona el repositorio:
+1. **Clona el repositorio**:
 
-bash
-Copiar código
+```bash
 git clone <url-del-repositorio>
 cd <directorio-del-proyecto>
-Instala las dependencias:
+# Instalación y Configuración
 
-bash
-Copiar código
+Sigue los siguientes pasos para instalar y configurar el proyecto en tu entorno local:
+
+2. **Instala las dependencias:
+
+```bash
 npm install
-Ejecuta el servidor de desarrollo:
 
-bash
-Copiar código
+3. **Ejecuta el servidor de desarrollo:
+
+'''bash
 npm run dev
-Compila para producción:
 
-bash
-Copiar código
+4.  **Compila para producción:
+
+'''bash
 npm run build
-Ejecuta el servidor en producción:
 
-bash
-Copiar código
+5. **Ejecuta el servidor en producción:
+
+'''bash
 npm run serve
-Rutas de la Aplicación
-/: Página principal (HomeView)
-/products: Lista de productos con barra de búsqueda (ProductView)
-/product/:id: Detalles de un producto (ProductDetailView)
-/creator: Formulario para crear nuevos productos (CreatorView)
-/chart: Carrito de compras (CartView)
-/delete-product: Eliminar producto por ID (DeleteProductView)
-Integración con la API
+
+# Rutas de la Aplicación
+
+- `/`: Página principal (**HomeView**)
+- `/products`: Lista de productos con barra de búsqueda (**ProductView**)
+- `/product/:id`: Detalles de un producto (**ProductDetailView**)
+- `/creator`: Formulario para crear nuevos productos (**CreatorView**)
+- `/chart`: Carrito de compras (**CartView**)
+- `/delete-product`: Eliminar producto por ID (**DeleteProductView**)
+
+# Integración con la API
+
 Este proyecto se conecta a una API para la gestión de productos. Las principales rutas de la API son:
 
-GET /api/products: Obtiene todos los productos.
-POST /api/products: Crea un nuevo producto.
-DELETE /api/products/{id}: Elimina un producto por su ID.
-Mejoras Futuras
+- **GET** `/api/products`: Obtiene todos los productos.
+- **POST** `/api/products`: Crea un nuevo producto.
+- **DELETE** `/api/products/{id}`: Elimina un producto por su ID.
+
+# Mejoras Futuras
+
 Algunas mejoras que se pueden implementar en el futuro incluyen:
 
-Autenticación: Añadir un sistema de autenticación para separar las funcionalidades entre usuarios comunes y administradores.
-Gestión de pedidos: Implementar la posibilidad de que los usuarios realicen pedidos y puedan hacer seguimiento a los mismos.
-Reseñas de productos: Permitir que los usuarios dejen reseñas y calificaciones sobre los productos.
-Pagos en línea: Integrar una pasarela de pagos para que los usuarios puedan realizar compras directamente desde la tienda.
+- **Autenticación**: Añadir un sistema de autenticación para separar las funcionalidades entre usuarios comunes y administradores.
+- **Gestión de pedidos**: Implementar la posibilidad de que los usuarios realicen pedidos y puedan hacer seguimiento a los mismos.
+- **Reseñas de productos**: Permitir que los usuarios dejen reseñas y calificaciones sobre los productos.
+- **Pagos en línea**: Integrar una pasarela de pagos para que los usuarios puedan realizar compras directamente desde la tienda.
+
