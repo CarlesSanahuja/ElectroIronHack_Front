@@ -78,7 +78,7 @@ const router = createRouter({
 });
 
 export default router;
-
+'''
 
 # Vistas
 
@@ -118,6 +118,7 @@ import HeaderComponent from './components/HeaderComponent.vue';
     <FooterComponent />
   </section>
 </template>
+'''
 
 # Funcionalidades Clave
 
@@ -142,29 +143,31 @@ Sigue los siguientes pasos para instalar y configurar el proyecto en tu entorno 
 ```bash
 git clone <url-del-repositorio>
 cd <directorio-del-proyecto>
-# Instalación y Configuración
-
-Sigue los siguientes pasos para instalar y configurar el proyecto en tu entorno local:
+'''
 
 2. **Instala las dependencias:
 
 ```bash
 npm install
+'''
 
 3. **Ejecuta el servidor de desarrollo:
 
 '''bash
 npm run dev
+'''
 
 4.  **Compila para producción:
 
 '''bash
 npm run build
+'''
 
 5. **Ejecuta el servidor en producción:
 
 '''bash
 npm run serve
+'''
 
 # Rutas de la Aplicación
 
