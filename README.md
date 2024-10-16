@@ -195,6 +195,10 @@ Algunas mejoras que se pueden implementar en el futuro incluyen:
 - **Reseñas de productos**: Permitir que los usuarios dejen reseñas y calificaciones sobre los productos.
 - **Pagos en línea**: Integrar una pasarela de pagos para que los usuarios puedan realizar compras directamente desde la tienda.
 
+
+# Enlace al Back:
+[https://github.com/CarlesSanahuja/ElectroIronHack_back/tree/master]
+
 # Presentación:
 [https://docs.google.com/presentation/d/1THcJ4CEIwfogHk97jf5eqzgK2UniFBLvcRmyuDcz0G4/edit?usp=sharing]
 
